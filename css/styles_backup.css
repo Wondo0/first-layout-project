@@ -1,0 +1,256 @@
+html,
+body {
+    font-family: Lato, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #424551;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1260px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.button {
+    display: inline-block;
+    line-height: 52px;
+    white-space: nowrap;
+    font-weight: 700;
+    padding: 0 40px;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    color: #fff;
+    transition: all .3s;
+    background: linear-gradient(56deg, #FF3F3A 0%, #F75E05 100%);
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.logo {}
+
+.button--empty {
+    position: relative;
+    background: transparent;
+    border-radius: 4px;
+    z-index: 0;
+}
+
+.button--empty span {
+    background: linear-gradient(56deg, #FF3F3A 0%, #F75E05 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.button--empty::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: 4px;
+    background: linear-gradient(56deg, #FF3F3A 0%, #F75E05 100%);
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+/* --------------------------------------------------- */
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url("/images/decor/shapes-bg.svg") 50% 30% / cover no-repeat, linear-gradient(56deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+}
+
+.header__top {
+    white-space: nowrap;
+}
+
+.header__top-inner {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 60px;
+}
+
+.header__nav {
+    margin-right: auto;
+}
+
+.header__nav-list {
+    display: flex;
+}
+
+.header__nav-item {
+    margin-right: 40px;
+}
+
+.header__nav-item:last-child {
+    margin-right: 0;
+}
+
+.header__nav-link {
+    line-height: 160%;
+    transition: all .2s
+}
+
+.header__nav-link:hover {
+    color: #FF3F3A;
+}
+
+.header__btn-box {
+    display: flex;
+    align-items: center;
+}
+
+.header__top-button {
+    margin-right: 36px;
+}
+
+.header__user-nav {
+    position: relative;
+    padding-left: 28px;
+
+}
+
+.header__user-nav::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: url(../images/icons/profile-icon.svg);
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.header__top-btn {
+    line-height: 1.6;
+    white-space: nowrap;
+    transition: all .2s;
+}
+
+.header__top-btn:hover {
+    color: #FF3F3A;
+}
+
+.header__content-btns {
+    display: flex;
+    align-items: center;
+}
+
+.header__content-btn {
+    margin-right: 24px;
+}
+
+.header__content-btn:last-child {
+    margin-right: 0;
+}
+
+.header__img {}
+
+.header__row {}
+
+.header__body {
+    flex: 1 1 auto;
+}
+
+.header__body-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header__main {
+    color: #1E212C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: auto;
+
+}
+
+.header__content {
+    margin-right: 30px;
+}
+
+.header__play {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__play svg {
+    transition: all .2s;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+.header__play svg:hover {
+    box-shadow: 0 0 0 16px rgba(255, 63, 58, 0.12);
+}
+
+
+.header__title {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+    letter-spacing: 1px;
+    max-width: 500px;
+    max-height: 250px;
+    margin-bottom: 60px;
+}
+
+.header__row {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__data {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    position: relative;
+}
+
+.header__list>span {
+    width: 8px;
+    height: 8px;
+    background-color: #FF3F3A;
+    border-radius: 50%;
+    margin: 0px 15px;
+}
+
+.header__data span {
+    color: #1E212C;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+    margin-right: 12px;
+}
