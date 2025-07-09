@@ -40,17 +40,38 @@ function updatePagination(activeIndex) {
     });
 }
 
-// Обновляем пагинацию при смене слайда
+
 splide.on('move', function (newIndex) {
     updatePagination(newIndex);
 });
 
-// Кликабельность кнопок пагинации
+
 paginationButtons.forEach(function (button, index) {
     button.addEventListener('click', function () {
         splide.go(index);
     });
 });
 
-// Устанавливаем активную кнопку при первоначальной загрузке
+
 updatePagination(splide.index);
+
+
+const coursemapButtons = document.querySelectorAll('.coursemap-button');
+
+coursemapButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const lesson = button.closest('.lesson');
+    if (!lesson) return;
+
+    const description = lesson.querySelector('.lesson-description');
+    const icon = button.querySelector('.button-icon');
+    if (!description) return;
+
+    const isVisible = description.style.contentVisibility === 'visible';
+    description.style.contentVisibility = isVisible ? 'hidden' : 'visible';
+
+    if (icon) {
+      icon.src = isVisible ? 'images/icons/Plus.svg' : 'images/icons/Minus.svg';
+    }
+  });
+});

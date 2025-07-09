@@ -770,7 +770,7 @@ h4,
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    
+
 }
 
 .testimonials__review::before {
@@ -791,7 +791,7 @@ h4,
     justify-content: center;
     height: 344px;
     width: 1020px;
-    
+
 }
 
 .testimonials__review-name {
@@ -873,6 +873,7 @@ h4,
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
 }
 
 .companies__list {
@@ -883,7 +884,7 @@ h4,
     column-gap: 102px;
 }
 
-.company svg{
+.company svg {
     filter: grayscale(100%);
     opacity: .7;
     transition: all .2s;
@@ -898,4 +899,80 @@ h4,
     display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+.coursemap {
+    margin-top: 120px;
+    margin-bottom: 190px;
+}
+
+.coursemap-description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.coursemap-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lessons {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+}
+
+button {
+    background: none;
+}
+
+
+.lesson span {
+    color: #FF3F3A;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-right: 8px;
+}
+
+.coursemap-button {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    position: relative;
+}
+
+
+.lesson {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.lesson-description {
+    color: #424551;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    width: 560px;
+    content-visibility: hidden;
+}
+
+
+.button-icon {
+    margin-right: 20px;
 }
